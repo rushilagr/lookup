@@ -28,7 +28,7 @@ class Server(port: Int, searcher: Searcher) {
         config
     }
 
-    val serverUri = new URI("http://localhost:" + port.toString + "/")
+    val serverUri = new URI("http://0.0.0.0:" + port.toString + "/")
     val server    = HttpServerFactory.create(serverUri, resources)
 
     def start() {
